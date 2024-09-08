@@ -10,7 +10,14 @@ export const productsApi = createApi({
         getProducts: builder.query({
             query: () => 'products'
         }),
+        deleteProducts: builder.mutation({
+            query: (id) => ({
+                url: `products/${id}`,
+                method: 'DELETE',
+            }),
+
+        }),
     }),
 });
 
-export const { useGetProductsQuery } = productsApi;
+export const { useGetProductsQuery, useDeleteProductsMutation } = productsApi;

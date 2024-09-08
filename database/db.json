@@ -20,20 +20,6 @@
       "description": "awesome",
       "category": "beauty",
       "id": "zFE3ayR7aVv1aspX6CnZP"
-    },
-    {
-      "id": "3-sDOIRhm-XBi0deFCF2i",
-      "title": "Lipstick blue",
-      "price": "234",
-      "description": "awesome",
-      "category": "beauty"
-    },
-    {
-      "id": "b4mx3XVk9d15m4uka0-C-",
-      "title": "Iphone 15",
-      "price": "1000",
-      "description": "awesome smartphone",
-      "category": "smartphone"
     }
   ]
 }
