@@ -1,9 +1,9 @@
-import React from 'react';
+import ProductsView from './features/products/ProductsView';
 
 const App = () => {
   return (
     <div>
-      app
+      <ProductsView/>
     </div>
   );
 };
