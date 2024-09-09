@@ -39,7 +39,7 @@ const ProductForm = () => {
         //     resetForm()
         // } 
 
-        console.log({ ...product, id: nanoid()});
+        // console.log({ ...product, id: nanoid()});
        try {
         await addProduct({...product, id: nanoid() })
        } catch (error) {

@@ -1,32 +1,18 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "Essence Mascara Lash Princess",
-      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-      "price": 9.99,
-      "category": "beauty"
-    },
-    {
       "id": "3",
-      "title": "Powder Canister",
+      "title": "Powder Canister 2",
       "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
-      "price": 14.99,
+      "price": 23,
       "category": "beauty"
     },
     {
-      "title": "Lipstick",
-      "price": "234",
-      "description": "awesome",
-      "category": "beauty",
-      "id": "zFE3ayR7aVv1aspX6CnZP"
-    },
-    {
-      "id": "qnMGN_YNZ_y3YFrtJDzSV",
-      "title": "a",
-      "price": "2345",
-      "description": "new",
-      "category": "smartphone"
+      "id": "4",
+      "title": "Powder Canister 3",
+      "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      "price": 55,
+      "category": "beauty"
     }
   ]
 }

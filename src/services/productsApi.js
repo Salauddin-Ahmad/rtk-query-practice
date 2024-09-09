@@ -11,9 +11,7 @@ export const productsApi = createApi({
         getProducts: builder.query({
             query: () => 'products',
             providesTags: (result) =>
-                result ?
-                    [...result.map(({ id }) => ({ type: 'Product', id }))]
-                    : [({ type: 'Product', id: 'LIST' })]
+                result ? [...result.map(({ id }) => ({ type: 'Product', id })), { type: 'Product', id: 'LIST' }] : [{ type: 'Product', id: 'LIST' }]
 
         }),
         deleteProducts: builder.mutation({
@@ -33,7 +31,15 @@ export const productsApi = createApi({
             }),
             invalidatesTags: [{ type: 'Product', id: 'LIST' }]
         }),
+        updateProduct: builder.mutation({
+            query: ({id, updatedProduct}) => ({
+                url: `products/${id}`,
+                method: 'PUT',
+                body: updatedProduct,
+            }),
+            invalidatesTags: (result, error, {id} ) => [{ type: 'Product', id: 'LIST' }]
+        }),
     }),
 });
 
-export const { useGetProductsQuery, useDeleteProductsMutation, useAddProductMutation } = productsApi;
+export const { useGetProductsQuery, useDeleteProductsMutation, useAddProductMutation, useUpdateProductMutation } = productsApi;
