@@ -1,10 +1,9 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
-
-
+import { useAddProductMutation } from "../../services/productsApi";
 
 const ProductForm = () => {
-   
+   const [addProduct] = useAddProductMutation()
     const [product, setProduct] = useState({
         title: '',
         price: '',
@@ -30,7 +29,7 @@ const ProductForm = () => {
             [e.target.name]: e.target.value,
         });
     };
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         // if (isEdit) {
         //     dispatch(updateProduct({ id: producToEdit.id, product: product }))
@@ -39,15 +38,22 @@ const ProductForm = () => {
         //     (dispatch(createProduct({ ...product, id: nanoid() })))
         //     resetForm()
         // } 
-        setProduct({
-            title: '',
-            price: '',
-            description: '',
-            category: '',
-        })
+
+        console.log({ ...product, id: nanoid()});
+       try {
+        await addProduct({...product, id: nanoid() })
+       } catch (error) {
+        console.log('Failed to save the product', error)
+       }
+
+        // setProduct({
+        //     title: '',
+        //     price: '',
+        //     description: '',
+        //     category: '',
+        // })
 
 
-        console.log({ ...product, id: nanoid() })
     }
 
     return (

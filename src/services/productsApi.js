@@ -36,4 +36,4 @@ export const productsApi = createApi({
     }),
 });
 
-export const { useGetProductsQuery, useDeleteProductsMutation } = productsApi;
+export const { useGetProductsQuery, useDeleteProductsMutation, useAddProductMutation } = productsApi;
