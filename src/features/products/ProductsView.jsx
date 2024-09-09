@@ -9,6 +9,7 @@ const ProductsView = () => {
     const handleDelete = async (id) => {
         await deleteProduct(id)
     }
+    
     return (
         <div>
             <h2>Lsit of products</h2>
